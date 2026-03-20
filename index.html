@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Portfolio</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #555555;
+      --border: #e8e8e8;
+      --accent: #4a90e2;
+      --max-width: 900px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.58;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+      margin-top: 22px;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 2.2rem;
+      letter-spacing: 0.01em;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .section-title {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.13rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+    }
+
+    .subheading {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .list {
+      margin: 10px 0 0;
+      padding-left: 1.1rem;
+    }
+
+    .list li {
+      margin: 5px 0;
+    }
+
+    .box-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.98);
+      border-bottom: 1px solid #f1f1f1;
+      backdrop-filter: blur(8px);
+      padding: 10px 20px;
+      margin-bottom: 20px;
+    }
+
+    .topnav a {
+      color: #333;
+      text-decoration: none;
+      margin-right: 14px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+    }
+
+    .topnav a:hover {
+      color: var(--accent);
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+      margin-top: 22px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .section-title {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.13rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    @media (min-width: 720px) {
+      .box-row { grid-template-columns: repeat(2, 1fr); }
+      .hero { display: flex; justify-content: space-between; align-items: center; }
+      .hero .left {max-width: 60%;}
+      .hero .right {text-align: right;}
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav">
+    <a href="#home">Home</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#more-info">More</a>
+  </nav>
+
+  <main class="page">
+    <!-- 1. My information -->
+    <section class="card hero" id="home">
+      <div class="left">
+        <h1>Jittapat Asavagunchorn</h1>
+        <p>Hello! I'm Jittapat Asavagunchorn, a passionate professional focused on delivering high-quality solutions. I enjoy software development, problem solving, and continuous growth.</p>
+      </div>
+      <div class="right">
+        <p class="muted">Email: s6835410022@sau.ac.th</p>
+        <p class="muted">Phone: [your phone]</p>
+        <p class="muted">Location: [your location]</p>
+        <p class="muted">LinkedIn: [your LinkedIn]</p>
+      </div>
+    </section>
+
+    <!-- 2. Educational background -->
+    <section class="card" id="education">
+      <h2 class="section-title">Educational Background</h2>
+      <article>
+        <p class="subheading">[Degree], [Major] - [Year]</p>
+        <p class="muted">[School / University Name]</p>
+        <ul class="list">
+          <li>GPA: [your GPA]</li>
+          <li>Relevant courses: [course1, course2, course3]</li>
+          <li>Awards / honors: [if any]</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- 3. Work experience -->
+    <section class="card" id="experience">
+      <h2 class="section-title">Work Experience</h2>
+      <article>
+        <p class="subheading">[Job Title] — [Company]</p>
+        <p class="muted">[Month Year] - [Month Year or Present]</p>
+        <ul class="list">
+          <li>[Responsibility or achievement #1]</li>
+          <li>[Responsibility or achievement #2]</li>
+          <li>[Responsibility or achievement #3]</li>
+        </ul>
+      </article>
+      <article>
+        <p class="subheading">[Job Title] — [Company]</p>
+        <p class="muted">[Month Year] - [Month Year]</p>
+        <ul class="list">
+          <li>[Responsibility or achievement #1]</li>
+          <li>[Responsibility or achievement #2]</li>
+          <li>[Responsibility or achievement #3]</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- 4. Projects -->
+    <section class="card" id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="box-row">
+        <article>
+          <p class="subheading">[Project Name]</p>
+          <p class="muted">Tech: [tech stack]</p>
+          <ul class="list">
+            <li>[Project description or key accomplishment]</li>
+            <li>[What you built / role / impact]</li>
+            <li>Link: <a href="[link]" target="_blank">Demo / Repo</a></li>
+          </ul>
+        </article>
+        <article>
+          <p class="subheading">[Project Name]</p>
+          <p class="muted">Tech: [tech stack]</p>
+          <ul class="list">
+            <li>[Project description or key accomplishment]</li>
+            <li>[What you built / role / impact]</li>
+            <li>Link: <a href="[link]" target="_blank">Demo / Repo</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. More info -->
+    <section class="card" id="more-info">
+      <h2 class="section-title">Additional Information</h2>
+      <article>
+        <p class="subheading">Skills & Strengths</p>
+        <ul class="list">
+          <li>[Skill #1]</li>
+          <li>[Skill #2]</li>
+          <li>[Skill #3]</li>
+        </ul>
+      </article>
+      <article>
+        <p class="subheading">Certifications / Awards</p>
+        <ul class="list">
+          <li>[Certification / Award #1]</li>
+          <li>[Certification / Award #2]</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
